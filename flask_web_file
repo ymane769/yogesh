@@ -1,0 +1,11 @@
+from distutils.debug import DEBUG
+from inspect import Parameter
+from pickle import TRUE
+from flask import Flask 
+app = Flask(__name__) 
+@app.route('/result', methods = ['POST'],Parameter=Parameter) 
+def result():
+    return render_template("fraud.html")
+    if __name__ == '__main__':
+        app.run(port=5000,debug=True) 
+
